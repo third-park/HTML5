@@ -10,5 +10,6 @@
   "attr-no-duplication": true,
   "title-require": true,
   "alt-require": true,
-  "doctype-html5": true
+  "tag-self-close": true,
+  "head-script-disabled": true
 }
