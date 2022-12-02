@@ -1,19 +1,17 @@
 @import url(./normalize.css);
 @import url(./reset.css);
 
-/* 본문 스타일 */
-body {
-  background: lightyellow;
-  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
-  /* alt+z하면 화면에 맞게 길이조절됨 개꿀 */
-  font-weight: 900;
-}
-
 /* 기본 스타일 */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+}
+/* 본문 스타일 */
+body {
+  background: #ccc;
+  font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  /* alt+z하면 화면에 맞게 길이조절됨 개꿀 */
 }
 /* 레이아웃 */
 .header,
@@ -27,9 +25,23 @@ body {
 
 /* 헤더 -이렇게 주석 달아주는 게 좋다.*/
 .header {
-  background: pink;
+  background: #fff;
     padding: 0 30px;
       height: 15vh;
+  border-radius: 0 0 15px 15px;
+    position: relative;
+  }
+  
+  /* 로고 */
+  .logo {
+    position: absolute;
+    top: 45px;
+    left: 50px;
+  }
+  
+  /* 텍스트 링크 */
+  .member {
+    background: aqua;
 }
 
 /* 비주얼 */
