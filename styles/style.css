@@ -41,17 +41,19 @@ body {
 /* 메인 */
 .main {
   background: lightgreen;
-  height: 50vh;
-    /* overflow: hidden; */
-    /* BFC 찾아보기, overflow 원리 알려면. */
+  min-height: 450px;
     display: flex;
-      flex-direction: row;
+  flex-flow: row nowrap;
+    /* flex-direction: row; flex-wrap: no-wrap; */
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 30px;
     }
   
+    
   .group1 {
     background: violet;
     width: 250px;
-    order: 2;
   }
   
   .group2 {
@@ -62,7 +64,6 @@ body {
   .group3 {
     background: gold;
     width: 190px;
-    order: -1;
 }
 
 /* 슬로건 */
