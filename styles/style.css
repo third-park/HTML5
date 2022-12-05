@@ -15,6 +15,7 @@ body {
 *::after {
   box-sizing: border-box;
 }
+
 /* 레이아웃 */
 .header,
 .visual,
@@ -27,9 +28,39 @@ body {
 
 /* 헤더 -이렇게 주석 달아주는 게 좋다.*/
 .header {
-  background: pink;
+  background: #fff;
     padding: 0 30px;
       height: 15vh;
+  border-radius: 0 0 15px 15px;
+  }
+  
+  .member {
+    background-color: pink;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: flex-end;
+  }
+  
+  /*  :before / ::before => first child */
+  /*  :after / ::after => last child */
+  /* box-sizing: border-box -> 상속 불가능 */
+  /* *::before / ::after 도 *와 묶어서 border-box를 줘야 한다. */
+  
+  /* .member li::before {
+              content: ":";
+            }
+            
+            .member li:first-child::before {
+              content: "";
+          } */
+  
+  .member li:nth-child(n + 2)::before {
+    content: ":";
+    background-color: skyblue;
+  }
+  
+  .member li:nth-child(n + 2):nth-child(-n + 4) {
+    background-color: yellow;
 }
 
 /* 비주얼 */
