@@ -43,7 +43,7 @@ a {
   .member {
     background-color: pink;
     display: flex;
-    flex-flow: nowrap;
+    flex-flow: row nowrap;
     justify-content: flex-end;
   }
 
@@ -55,7 +55,7 @@ a {
   /* box-sizing: border-box -> 상속 불가능 */
   /* *::before / ::after 도 *와 묶어서 border-box를 줘야 한다. */
   
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* .member li:nth-child(n + 2)::before {
+    /* .member li:nth-child(n + 2)::before {
     content: ":";
     background-color: skyblue;
   }
