@@ -1,5 +1,6 @@
 @import url(./normalize.css);
 @import url(./reset.css);
+@import url(./fontello.css);
 
 /* 본문 스타일 */
 body {
@@ -46,15 +47,7 @@ body {
   /* box-sizing: border-box -> 상속 불가능 */
   /* *::before / ::after 도 *와 묶어서 border-box를 줘야 한다. */
   
-  /* .member li::before {
-              content: ":";
-            }
-            
-            .member li:first-child::before {
-              content: "";
-          } */
-  
-  .member li:nth-child(n + 2)::before {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                /* .member li:nth-child(n + 2)::before {
     content: ":";
     background-color: skyblue;
   }
@@ -62,6 +55,7 @@ body {
   .member li:nth-child(n + 2):nth-child(-n + 4) {
     background-color: yellow;
 }
+*/
 
 /* 비주얼 */
 .visual {
