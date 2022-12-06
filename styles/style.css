@@ -91,12 +91,27 @@ body {
 
 /* 메인 메뉴 */
 .menu {
+  border-top: 2px solid #212121;
   background: #e85e2c linear-gradient(to bottom,
       #1e5799 0%,
       #ef9126 0%,
       #e85e2c 35%,
       #e85e2c 70%,
       #ef9126 100%);
+  border-radius: 0 0 5px 5px;
+    display: flow-root;
+    padding-left: 230px;
+  }
+  
+  .menu-item {
+    background-color: aqua;
+    float: left;
+  }
+  
+  .sub-menu {
+    position: absolute;
+    background-color: pink;
+    display: none;
 }
 
 /* 비주얼 */
