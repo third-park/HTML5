@@ -110,7 +110,6 @@ body {
       position: relative;
 }
 .menu-item {
-  position: relative;
     float: left;
     border-left: 2px solid #fff;
 }
@@ -137,7 +136,7 @@ body {
 
 .sub-menu {
   position: absolute;
-    top: 47px;
+    /* top: 47px; */
       padding: 4px 0;
       display: none;
 }
@@ -163,6 +162,7 @@ body {
   display: inline-block;
 }
 
+
 .sub-menu a::before {
   content: '\e805';
   font-family: "fontello";
@@ -179,7 +179,6 @@ body {
 .sub-menu a:hover::before,
 .sub-menu a:focus::before {
   content: '\e801';
-  ;
 }
 .sub-menu a {
   display: inline-block;
