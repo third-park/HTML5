@@ -1,3 +1,4 @@
+@import url(./fonts.css);
 @import url(./normalize.css);
 @import url(./reset.css);
 
@@ -57,6 +58,7 @@ body {
     position: absolute;
     top: 45px;
     left: 50px;
+    z-index: 1000;
   }
   
 /* 텍스트 링크 모음*/
@@ -101,8 +103,14 @@ body {
   border-radius: 0 0 5px 5px;
     padding-left: 230px;
     height: 47px;
+    position: relative;
+    }
+    
+    .menu>li:nth-child(-n + 3) {
+      position: relative;
 }
 .menu-item {
+  position: relative;
     float: left;
     border-left: 2px solid #fff;
 }
@@ -126,12 +134,52 @@ body {
   display: block;
   border-top: 2px solid black;
 }
+
   .sub-menu {
     position: absolute;
     background-color: pink;
     display: none;
 }
 
+.menu-html,
+.menu-css,
+.menu-standards {
+  left: 0;
+}
+
+.menu-accessibility,
+.menu-qna,
+.menu-archive {
+  right: 0;
+}
+
+.is-active .sub-menu {
+  display: block;
+  white-space: nowrap;
+}
+
+.sub-menu li {
+  display: inline-block;
+}
+
+.sub-menu a::before {
+  content: '\e805';
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: never;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+}
+
+.sub-menu a:hover::before,
+.sub-menu a:focus::before {
+  content: '\e801';
+  ;
+}
 /* 비주얼 */
 .visual {
   background: orange;
