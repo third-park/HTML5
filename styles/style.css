@@ -135,10 +135,11 @@ body {
   border-top: 2px solid black;
 }
 
-  .sub-menu {
-    position: absolute;
-    background-color: pink;
-    display: none;
+.sub-menu {
+  position: absolute;
+    top: 47px;
+      padding: 4px 0;
+      display: none;
 }
 
 .menu-html,
@@ -180,6 +181,15 @@ body {
   content: '\e801';
   ;
 }
+.sub-menu a {
+  display: inline-block;
+  padding: 6px 0;
+}
+
+.sub-menu a:hover,
+.sub-menu:focus {
+  color: red;
+}
 /* 비주얼 */
 .visual {
   background: orange;
@@ -188,7 +198,7 @@ body {
 
 /* 메인 */
 .navigation {
-  padding-bottom: 80px;
+  padding-bottom: 40px;
 }
 .main {
   background: lightgreen;
