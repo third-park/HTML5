@@ -204,18 +204,56 @@ body {
     transform: translate(400px, 75px);
   }
 }
+@keyframes fadeEffect {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
 .visual {
   height: 120px;
-    /* position: relative; <-배경애니메이션에 필요한 기능 */
+  /* 배경애니메이션에 필요한 렐러티브 */
+    position: relative;
+  }
+  
+  .visual::before,
+  .visual::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation-name: fadeEffect;
+    animation-duration: 1000ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+  
+  .visual::before {
+    background: url(./images/ani_flower_01.png) no-repeat 0% -10px, url(./images/ani_flower_02.png) no-repeat 65% 10px;
+  }
+  
+  .visual::after {
+    background-image: url(./images/ani_flower_03.png), url(./images/ani_flower_04.png);
+    background-repeat: no-repeat;
+    background-position: 38% 0, 90% 0;
+    animation-delay: 1000ms;
   }
   
   .visual-text {
     font-family: Georgia, 'Times New Roman', Times, serif;
     animation-name: moveEffect;
-    animation-duration: 3000ms;
+    animation-duration: 2000ms;
       animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
-    display: inline-block;
+    /* display: inline-block; */
+      /* z-index는 레이어일떄만 적용된다 즉, position을 줘서 띄워줘야 한다. */
+      position: absolute;
+      z-index: 1;
 }
 
 /* 메인 */
