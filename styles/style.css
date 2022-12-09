@@ -3,7 +3,8 @@
 @import url(./reset.css);
 
 /* 숨김컨텐츠 */
-.a11y-hidden {
+.a11y-hidden,
+legend {
   background-color: red;
   position: absolute;
   width: 1px;
@@ -261,12 +262,13 @@ body {
   padding-bottom: 40px;
 }
 .main {
-  background: lightgreen;
-  height: 50vh;
   display: flow-root;
+  background: #fff;
+    min-height: 450px;
+    padding: 30px 15px;
+    border-radius: 15px 15px 0 0;
     /* overflow: hidden; */
     /* BFC 찾아보기, overflow 원리 알려면. */
-    padding: 0 15px;
   }
   
   .group {
@@ -274,9 +276,8 @@ body {
     float: left;
   }
   
-  .group1 {
-    background: violet;
-    width: 250px;
+.group1 {
+  width: 250px;
   }
   
   .group2 {
@@ -289,6 +290,91 @@ body {
     width: 190px;
 }
 
+/* 로그인 */
+.login {
+  box-shadow: 5px 5px 0 0 #ccc;
+  background: orange radial-gradient(circle at right top, orange, orangered);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.login-title {
+  color: #ff0;
+  font-size: 15px;
+  font-weight: 700;
+  /* margin/padding 대신 text-indent 도 이용가능. */
+  text-indent: 10px;
+}
+
+.login-form {
+  background-color: #fff;
+  margin-top: 10px;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 10px 0 10px;
+}
+
+.login-form fieldset {
+  position: relative;
+  border-bottom: 1px solid black;
+  padding-bottom: 5px;
+}
+
+.user-email,
+.user-pw {
+  margin-bottom: 5px;
+}
+
+.login-form label {
+  display: inline-block;
+  width: 4em;
+}
+
+.login-form input {
+  width: 90px;
+  height: 24px;
+  border: 1px solid #aaa;
+  padding: 1px 1px 1px 5px;
+}
+
+.login-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 53px;
+  background-color: orangered;
+  color: #fff;
+  border: 0;
+  padding: 0 8;
+  border-radius: 5px;
+}
+
+.sign {
+  background-color: #fff;
+  border-radius: 0 0 5px 5px;
+  padding: 4px 10px 4px 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.sign a {
+  display: block;
+  padding: 6px 0;
+  letter-spacing: -1px;
+}
+
+.sign a::before {
+  content: '\e804';
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  color: orangered;
+}
 /* 슬로건 */
 .slogan {
   background: skyblue;
