@@ -396,6 +396,65 @@ body {
   padding: 8px 15px 8px 45px;
   background: url(./images/validation_icon.png) no-repeat 25px 50%, #ccc linear-gradient(to bottom, #ccc, #eee) repeat 0 0;
 }
+/* 웹 관련 용어 */
+.term {
+  margin-top: 20px;
+  background: #ccc linear-gradient(to bottom, #ccc, #eee) repeat 0 0;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 15px;
+}
+
+.term-title {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.term-list {
+  margin-top: 10px;
+  background-color: yellow;
+}
+
+.term-list div {
+  background-color: pink;
+  margin-top: 10px;
+  display: flow-root;
+}
+
+.term-list-subject,
+.term-list-brief {
+  float: right;
+  width: 145px;
+}
+
+.term-list-subject {
+  background-color: lime;
+  font-weight: 500;
+}
+
+.term-list-thumbnail {
+  background-color: skyblue;
+  float: left;
+}
+
+.term-list-thumbnail img {
+  vertical-align: middle;
+}
+
+.term-list-brief {
+  margin-top: 5px;
+  line-height: 1.5;
+  background-color: coral;
+}
+
+.cross .term-list-subject,
+.cross .term-list-brief {
+  float: left;
+}
+
+.cross .term-list-thumbnail {
+  float: right;
+}
 /* 슬로건 */
 .slogan {
   background: skyblue;
