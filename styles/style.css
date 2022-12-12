@@ -1,4 +1,5 @@
 @import url(./fonts.css);
+@import url(./fontello.css);
 @import url(./normalize.css);
 @import url(./reset.css);
 
@@ -280,8 +281,7 @@ body {
   width: 250px;
   }
   
-  .group2 {
-    background: salmon;
+.group2 {
     width: 380px;
   }
   
@@ -412,11 +412,9 @@ body {
 
 .term-list {
   margin-top: 10px;
-  background-color: yellow;
 }
 
 .term-list div {
-  background-color: pink;
   margin-top: 10px;
   display: flow-root;
 }
@@ -428,12 +426,10 @@ body {
 }
 
 .term-list-subject {
-  background-color: lime;
   font-weight: 500;
 }
 
 .term-list-thumbnail {
-  background-color: skyblue;
   float: left;
 }
 
@@ -444,7 +440,6 @@ body {
 .term-list-brief {
   margin-top: 5px;
   line-height: 1.5;
-  background-color: coral;
 }
 
 .cross .term-list-subject,
@@ -454,6 +449,113 @@ body {
 
 .cross .term-list-thumbnail {
   float: right;
+}
+/* 검색 폼 */
+.search-form {
+  background: #ccc linear-gradient(to bottom, #ccc, #eee);
+  border: 1px solid #aaa;
+  border-radius: 15px 15px 0 0;
+  padding: 15px 25px 10px;
+}
+
+.search-form-inner {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.form-group {
+  flex-grow: 1;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.form-group-label {
+  /* white-space: nowrap; */
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.form-group-input {
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  height: 24px;
+  padding: 1px 1px 1px 5px;
+  flex-grow: 1;
+  min-width: 0;
+  width: 100%;
+}
+
+.search-button {
+  flex-shrink: 0;
+  /* white-space: nowrap; */
+  border: 0;
+  border-radius: 3px;
+  height: 24px;
+  background-color: #000;
+  color: #fff;
+  padding: 0 10px;
+  font-size: 13px;
+}
+
+/* 공지사항 및 자료실 */
+.board {
+  margin-top: 20px;
+  position: relative;
+}
+
+.tablist {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.tab {
+  border: 1px solid #aaa;
+  border-radius: 5px 5px 0 0;
+  height: 35px;
+  width: 70px;
+  background-color: #aaa;
+}
+
+.is-select.tab {
+  background-color: #fff;
+  color: red;
+  border-color: currentColor currentColor #fff currentColor;
+}
+
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.icon-plus::before {
+  color: hsla(110, 50%, 30%, 1);
+}
+
+.board-list li {
+  margin-top: 10px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.board-list a {
+  flex-grow: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab-panel {
+  display: none;
+  line-height: 20px;
+}
+
+.is-select.tab-panel {
+  display: block;
 }
 /* 슬로건 */
 .slogan {
