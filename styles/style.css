@@ -505,34 +505,32 @@ body {
   position: relative;
 }
 
-.tablist {
+.tab-list {
   display: flex;
   flex-flow: row nowrap;
 }
 
 .tab {
   border: 1px solid #aaa;
+  background-color: #ccc;
   border-radius: 5px 5px 0 0;
-  height: 35px;
-  width: 70px;
-  background-color: #aaa;
+  padding: 5px 10px;
+    color: #666;
 }
 
 .is-select.tab {
   background-color: #fff;
-  color: red;
+  color: #e85e2c;
   border-color: currentColor currentColor #fff currentColor;
 }
 
-.board-more {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  padding: 8px;
+.tab-panel {
+  display: none;
+  margin-top: 15px;
 }
 
-.icon-plus::before {
-  color: hsla(110, 50%, 30%, 1);
+.is-select.tab-panel {
+  display: block;
 }
 
 .board-list li {
@@ -549,13 +547,20 @@ body {
   text-overflow: ellipsis;
 }
 
-.tab-panel {
-  display: none;
-  line-height: 20px;
+.board-list time {
+  flex-shrink: 0;
+  margin-left: 10px;
 }
 
-.is-select.tab-panel {
-  display: block;
+.board-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
+}
+
+.icon-plus::before {
+  color: hsla(110, 50%, 30%, 1);
 }
 /* 새소식 */
 .news {
