@@ -659,7 +659,10 @@ body {
   margin: 10px 0;
 }
 
-.event-thumbnail img {}
+.event-thumbnail img {
+  border: 1px solid #aaa;
+  box-shadow: 5px 5px 0 0 #ccc;
+}
 
 .event-brief {
   line-height: 1.5;
@@ -695,6 +698,68 @@ body {
 .related-list:focus {
   padding: 10px 0;
   height: 147px;
+}
+/* 인기 사이트 */
+
+.favorite {
+  position: relative;
+}
+
+.favorite-list {
+  list-style-type: none;
+  counter-reset: list-number 10;
+}
+
+.favorite-list li {
+  margin-top: 10px;
+  counter-increment: list-number;
+  /* display: flex;
+  flex-flow: row nowrap;
+  align-items: center; */
+  position: relative;
+}
+
+.favorite-list li::before {
+  content: counter(list-number);
+  background-color: #aaa;
+  color: #fff;
+  padding: 1px 6px;
+  font-size: 1.2rem;
+  margin-right: 5px;
+  border-radius: 3px;
+}
+
+.favorite-list a {
+  /* flex-grow: 1; */
+}
+
+.up,
+.stop,
+.down {
+  width: 9px;
+  height: 11px;
+  background: url(./images/rank.png) no-repeat;
+  margin-left: auto;
+  /* float: right; */
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-top: -5px;
+}
+
+.down {
+  background-position: 0 100%;
+}
+
+.stop {
+  background-position: 0 48%;
+}
+
+.favorite-more {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  padding: 8px;
 }
 /* 슬로건 */
 .slogan {
